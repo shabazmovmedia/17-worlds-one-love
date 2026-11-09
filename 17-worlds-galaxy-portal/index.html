@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090719">
+  <title>17 Worlds, One Love — Galaxy Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Galaxy Portal home"><span class="brand-star">✦</span> 17 WORLDS <i>ONE LOVE</i></a>
+    <div class="progress-wrap">
+      <div class="progress-copy"><span id="progress-label">0 OF 16 WORLDS VISITED</span><span>✧</span></div>
+      <div class="progress-track"><div id="progress-fill"></div></div>
+    </div>
+    <button class="sound-toggle" id="reset-progress" title="Reset visited stars">↺ <span>Reset</span></button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow"><span></span> A LITTLE UNIVERSE MADE FOR YOU <span></span></p>
+      <h1>Every star leads<br> <em>back to you.</em></h1>
+      <p class="intro-copy">Sixteen little worlds. One journey. And a moon waiting at the end.</p>
+      <div class="instruction"><span class="mouse-icon">✧</span> CHOOSE A STAR TO BEGIN YOUR JOURNEY</div>
+    </section>
+
+    <section class="universe" aria-label="Interactive map of sixteen destinations">
+      <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+      <div class="orbit orbit-c"></div>
+      <div class="planet planet-small"></div>
+      <div class="moon-glow"></div>
+      <div class="moon" id="moon-destination" role="button" tabindex="0" aria-label="Open destination 17, Our Moon">
+        <span class="moon-crater crater-one"></span><span class="moon-crater crater-two"></span><span class="moon-crater crater-three"></span>
+        <span class="moon-title">OUR MOON</span><span class="moon-subtitle">DESTINATION 17</span>
+      </div>
+      <div id="star-field"></div>
+      <div class="ship" id="ship" aria-hidden="true">✦<span></span></div>
+      <div class="map-caption"><span class="caption-line"></span> YOUR CONSTELLATION <span class="caption-line"></span></div>
+    </section>
+
+    <section class="bottom-note">
+      <span class="note-sparkle">✧</span>
+      <p>Take your time. Every world has something waiting for you.</p>
+      <span class="note-sparkle">✧</span>
+    </section>
+  </main>
+
+  <div class="travel-overlay" id="travel-overlay" aria-hidden="true">
+    <div class="travel-star">✦</div>
+    <p>TRAVELLING TO</p>
+    <h2 id="travel-name">A NEW WORLD</h2>
+    <span class="travel-line"></span>
+  </div>
+
+  <dialog id="star-dialog">
+    <button class="dialog-close" id="dialog-close" aria-label="Close">×</button>
+    <p class="dialog-kicker" id="dialog-number">DESTINATION 02</p>
+    <h2 id="dialog-title">Our Beginning</h2>
+    <p id="dialog-description">A little world in our universe.</p>
+    <p class="dialog-status" id="dialog-status"></p>
+    <button class="launch-button" id="launch-button">TRAVEL TO THIS STAR <span>↗</span></button>
+  </dialog>
+
+  <footer>MADE OF MEMORIES, STARDUST & A LITTLE TOO MUCH LOVE <span>♡</span></footer>
+  <script src="stars.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
